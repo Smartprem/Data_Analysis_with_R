@@ -15,6 +15,15 @@ unique(starwars$gender)
 starwars$gender <- as.factor(starwars$gender)
 class(starwars$gender)
 
+#Changing variable
+starwars %>% 
+  rename("movies" = "films") %>% 
+  glimpse()
+
+#Reordering Variable
+starwars %>% 
+  select(name, gender, height, everything())
+
 #checking the gender levels
 levels(starwars$gender)
 
